@@ -1,0 +1,45 @@
+[project]
+name = "argonaut-documentation"
+version = "26.9.0"
+authors = [
+    { name = "Rudy Klucik", email = "rudy.klucik@noaa.gov" },
+]
+maintainers = [
+    { name = "Rudy Klucik", email = "rudy.klucik@noaa.gov" },
+]
+description = "Documentation for GDAC data processing"
+keywords = ["ocean", "gdac", "netcdf"]
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+
+# uv sync --all-groups --upgrade
+dependencies = [
+    "geopandas==1.1.4",
+    "netCDF4==1.7.4",
+    "numpy==2.5.2",
+    "pandas==3.0.5",
+    "pyarrow==25.0.1",
+    "scipy==1.18.1",
+    "xarray==2026.7.0",
+]
+
+# uv sync --all-groups --upgrade
+[dependency-groups]
+dev = [
+    "bandit[toml]",
+    "build",
+    "pip",
+    "pooch",
+    "pre-commit",
+    "pytest",
+    "pytest-cov", # uv run pytest --cov=testing_demo
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://www.aoml.noaa.gov/argo/"
+Repository = "https://github.com/CI-CMG/argonaut"
+Documentation = "https://github.com/CI-CMG/argonaut-documentation"
+Issues = "https://github.com/CI-CMG/argonaut/issues"
