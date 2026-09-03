@@ -25,6 +25,9 @@ mkdocs new .
 mkdocs serve
 
 # and open browser
+
+# to build
+mkdocs build
 ```
 
 # Material Documentation

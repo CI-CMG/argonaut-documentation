@@ -57,8 +57,10 @@ markdown_extensions:
 extra:
   social:
     - icon: simple/youtube
-      link: https://youtube.com/@
+      link: https://www.youtube.com/@NOAASatellites
+    - icon: simple/facebook
+      link: https://www.facebook.com/NOAANCEI/
     - icon: simple/instagram
       link: https://www.instagram.com/noaa_aoml
 
-copyright: Copyright &copy; 2026 NOAA NCEI
+copyright: <i>Cooperative Institute for Research in Environmental Sciences</i>, Marine Geology & Geophysics Developer Team
