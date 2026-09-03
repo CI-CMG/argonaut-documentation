@@ -1,0 +1,4 @@
+site_name: Argonaut Documentation
+site-url: https://sitename.example
+theme:
+  name: material
