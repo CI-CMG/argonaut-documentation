@@ -26,3 +26,6 @@ mkdocs serve
 
 # and open browser
 ```
+
+# Material Documentation
+https://squidfunk.github.io/mkdocs-material/reference/diagrams/
