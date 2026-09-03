@@ -9,11 +9,20 @@ Using MKDocs to build out documentation for the following resources:
 - [Argo Data management website](https://www.argodatamgt.org/DataAccess.html)
 - [Argo GDAC cookbook](https://archimer.ifremer.fr/doc/00351/46202/)
 
-# Initializing the project:
+# Initializing the mkdoc project
 Following the tutorial from [here](https://www.youtube.com/watch?v=xlABhbnNrfI).
 
 ```
 # initialize venv
 uv pip install mkdocs-material
+
+# then run
 mkdocs new .
+
+# manually configure yaml
+
+# then run 'mkdocs serve'
+mkdocs serve
+
+# and open browser
 ```
