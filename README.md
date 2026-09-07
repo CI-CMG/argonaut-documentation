@@ -32,3 +32,5 @@ mkdocs build
 
 # Material Documentation
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+
+Reference the uv documentation here: https://github.com/astral-sh/uv/tree/main/docs

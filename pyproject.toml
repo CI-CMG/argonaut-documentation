@@ -1,6 +1,6 @@
 [project]
 name = "argonaut-documentation"
-version = "26.9.0"
+version = "26.9.1"
 authors = [
     { name = "Rudy Klucik", email = "rudy.klucik@noaa.gov" },
 ]

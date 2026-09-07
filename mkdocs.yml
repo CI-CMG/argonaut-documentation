@@ -1,5 +1,9 @@
 site_name: Argonaut Documentation
-site_url: https://sitename.example
+repo_url: https://github.com/CI-CMG/argonaut
+repo_name: Argonaut
+site_author: Rudy Klucik
+site_url: https://ci-cmg.github.io/argonaut-documentation/
+site_description: Argonaut is for processing Argo GDAC datasets
 theme:
   name: material
   font:
@@ -54,6 +58,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
 extra:
   social:
     - icon: simple/youtube
@@ -64,3 +75,20 @@ extra:
       link: https://www.instagram.com/noaa_aoml
 
 copyright: <i>Cooperative Institute for Research in Environmental Sciences</i>, Marine Geology & Geophysics Developer Team
+
+#nav:
+#  - Introduction: index.md
+#  - Cookbook: cookbook.md
+#  - Getting started:
+#      - getting-started/index.md
+#      - Installation: getting-started/installation.md
+#      - First steps: getting-started/first-steps.md
+#      - Features: getting-started/features.md
+#      - Getting help: getting-started/help.md
+#  - Guides:
+#      - guides/index.md
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
