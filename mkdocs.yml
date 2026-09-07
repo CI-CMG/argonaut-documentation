@@ -13,6 +13,7 @@ theme:
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   icon:
     logo: fontawesome/solid/anchor
+    repo: fontawesome/brands/github
 #  logo: assets/logo.png
 #  favicon: assets/favicon.ico
   features:
@@ -33,6 +34,10 @@ theme:
         name: Light mode
       primary: blue
       accent: deep orange
+
+#plugins:
+#  - git-revision-date-localized:
+#      enable_creation_date: true
 
 # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
 markdown_extensions:
