@@ -12,7 +12,7 @@ Authors: Thierry Carval (Ifremer), Mark Ignaszewski (FNMOC), Michael Frost (FNMO
 
 ***
 
-## Introduction
+## :peace: Introduction
 
 This document describes the implementation of the GDAC services.
 
@@ -86,9 +86,9 @@ This chapter documents the time of activation of the two GDACs services.
 -  Argo DACs files collect: every 30 minutes
 -  Update of the index file: every hour
 -  GDAC synchronization: once a day
--  Profile merging on dac directory: every hour
--  Profile merging on geo directory: every hour
--  Profile merging on latest_data directory: every hour
+-  Profile merging on ***dac*** directory: every hour
+-  Profile merging on ***geo*** directory: every hour
+-  Profile merging on ***latest_data*** directory: every hour
 -  Index files generation: every hour
 
 ***

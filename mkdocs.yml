@@ -70,6 +70,10 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
+  - attr_list
+  - md_in_html
+  - tables
+
 extra:
   social:
     - icon: simple/youtube

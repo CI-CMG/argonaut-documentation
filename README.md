@@ -34,3 +34,5 @@ mkdocs build
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
 
 Reference the uv documentation here: https://github.com/astral-sh/uv/tree/main/docs
+
+Reference on most plugins: https://squidfunk.github.io/mkdocs-material/reference/footnotes/
