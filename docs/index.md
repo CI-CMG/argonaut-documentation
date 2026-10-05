@@ -2,6 +2,12 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
+## Learn More About Argo
+
+Small class showing all the needed info about the Argo Project:
+
+<https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html>
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.

@@ -82,21 +82,47 @@ bio-, and merge-files.
 Example 1: Selecting merge <PARAM\>s and N_PARAM. The core-file contains only core-parameters, 
 by definition. The bio-file parameter-types are indicated following the parameter name.
 
-| Core-file<br />N_PROF=2; N_PARAM=3                                          | Bio-file<br />N_PROF=2 ; N_PARAM=5                                                                                                               |
-|:----------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Profile 1<br />Number of parameters=3                                       | Profile 1<br />Number of parameters=2                                                                                                            |
+|                     Core-file<br />N_PROF=2; N_PARAM=3                      | Bio-file<br />N_PROF=2 ; N_PARAM=5                                                                                                               |
+|:---------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                    Profile 1<br />Number of parameters=3                    | Profile 1<br />Number of parameters=2                                                                                                            |
 | STATION_PARAMETERS<br />1,1) PRES (c)<br />1,2) TEMP (c)<br />1,3) PSAL (c) | STATION_PARAMETERS<br />1,1) PRES (c)<br />1,2) DOXY (b)                                                                                         |
-| Profile 2<br />Number of parameters=1                                       | Profile 2<br />Number of parameters=5                                                                                                            |
-| STATION_PARAMETERS<br />2,1) PRES (c)                                       | STATION_PARAMETERS<br />2,1) PRES (c)<br />2,2) BBP (b)<br />2,3) UV_INTENSITY_REF_NITRATE (i)<br />2,4) MOLAR_NITRATE (i)<br />2,5) NITRATE (b) |
+|                    Profile 2<br />Number of parameters=1                    | Profile 2<br />Number of parameters=5                                                                                                            |
+|                    STATION_PARAMETERS<br />2,1) PRES (c)                    | STATION_PARAMETERS<br />2,1) PRES (c)<br />2,2) BBP (b)<br />2,3) UV_INTENSITY_REF_NITRATE (i)<br />2,4) MOLAR_NITRATE (i)<br />2,5) NITRATE (b) |
 
+
+|                      Merge-file<br />N_PROF=2 ; N_PARAM=4                      |
+|:------------------------------------------------------------------------------:|
+|                     Profile 1<br />Number of Parameters=4                      |
+| STATION_PARAMETERS<br />1,1) PRES<br />1,2) TEMP<br />1,3) PSAL<br />1,4) DOXY |
+|                     Profile 2<br />Number of parameters=3                      |
+|       STATION_PARAMETERS<br />2,1) PRES<br />2,2) BBP<br />2,3) NITRATE        |
+
+: {tbl-colwidths="[75]"}
 
 ### Variable Definitions
 
+The variable definitions (type and dimensions) of the merge-file variables are the same as those for the
+**bio-file**. The core-file and bio-file definitions are nearly identical. However, there are a couple of
+differences. The bio-file definitions are used for the merge-file.
+
+**Parameter names dimension**: Merge-file parameter names are dimensioned to 64 characters.
+Parameter names are dimensioned to 16 characters in core-files and 64 characters in bio-files.
+
+Applicable variables: STATION_PARAMETERS, PARAMETER, HISTORY_PARAMETER.
+
+**DATA_TYPE dimension**: Merge-file DATA_TYPE will be dimensioned to 32 characters.
+DATA_TYPE is dimensioned to 16 characters in core-files and 32 characters in bio-files.
+
+**PARAMETER_DATA_MODE variable**: This variable is an OPTIONAL variable in the bio-file.
+Merge-files will always contain this variable. The filling of this variable is described below.
+
 ### Variable Attributes
+
+
 
 ### **General Information on the File** Variables
 
-### **General Information for each Profile** Variables
+### **General Information for Each Profile** Variables
 
 ### PROFILE_<PARAM>_QC
 
@@ -118,7 +144,30 @@ by definition. The bio-file parameter-types are indicated following the paramete
 
 ### Global Attributes
 
+The global attributes are copied from the core-file. The global attributes from the bio-file are ignored.
+
+*Exception*: The global attribute for “institution” is either “US GDAC” or “French GDAC”
+
 ### Merge-pair Data Validation
+
+There are requirements placed on the data contained within the merge-pair files. The FileChecker
+does not enforce these requirements. The merge-file processing will enforce these requirements.
+
+**In case of failures**: If any of the following checks fail
+
+-  A warning is issued to the DAC
+-  No merge-file is created
+-  An existing merge-file is removed.
+-  The core-file and bio-file remain on the GDAC.
+
+**Merge-pair Validation Checks**:
+
+-  FORMAT_VERSION: The merge-pair files must have the same FORMAT_VERSION
+    -  This requirement is currently being “relaxed” during the v3.0 to v3.1 transition
+-  N_PROF: The merge-pair files must have the same N_PROF value
+-  N_LEVELS: The merge-pair files must have the same N_LEVELS value
+-  PRES: On a profile-by-profile basis
+    -  The PRES level values must be the same between the core-file and bio-file
 
 ***
 

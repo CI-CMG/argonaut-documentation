@@ -12,6 +12,9 @@ Using MKDocs to build out documentation for the following resources:
 # Initializing the mkdoc project
 Following the tutorial from [here](https://www.youtube.com/watch?v=xlABhbnNrfI).
 
+# Material for MkDocs
+https://squidfunk.github.io/mkdocs-material/
+
 ```
 # initialize venv
 uv pip install mkdocs-material
@@ -30,7 +33,7 @@ mkdocs serve
 mkdocs build
 ```
 
-# Material Documentation
+# Material Reference Documentation
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
 
 Reference the uv documentation here: https://github.com/astral-sh/uv/tree/main/docs
