@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/admonitions/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/code-examples/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/cookbook/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/description-of-the-argo-gdac-file-merge-process/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://ci-cmg.github.io/argonaut-documentation/diagram-examples/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+</urlset>
